@@ -1,4 +1,2 @@
-# CloudflareApps--GoogletagManager
-A cloudflare app to support installation of google tag manager in websites.
-
-Install google tag manager through cloudflare Apps.
+# CF-Store-GTM
+A CF app to inject the GTM JS snippet into a website

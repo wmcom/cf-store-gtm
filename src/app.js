@@ -23,12 +23,12 @@
     }
 
     function InsertCodeIntoWebpage(google_tag_id) {
-        /* Insert Google Tag Manager script at Head */
+        /* Insert Google Tag Manager script at HEAD */
         var HeadTag = document.head;
         var existing_HeadContent = HeadTag.innerHTML;
         HeadTag.innerHTML = GenerateGoogleHeadTag(google_tag_id) + existing_HeadContent;
 
-        /* Insert Google Tag Manager Script at body */
+        /* Insert Google Tag Manager Script at BODY */
         var BodyTag = document.body;
         var existing_BodyContent = BodyTag.innerHTML;
         BodyTag.innerHTML = GenerateGoogleBodyTag(google_tag_id) + existing_BodyContent;
@@ -67,8 +67,8 @@
         /* Get envrionment variables for Google tag id */
         var google_tag_id = INSTALL_OPTIONS.google_tag_id.trim();
         if (google_tag_id === undefined) {
-            console.error("CloudflareApps--GoogleTagManager -- Missing ID");
-            console.error("CloudflareApps--GoogleTagManager -- installation on hold");
+            console.error("WM CF-Store-GTM -- Missing ID");
+            console.error("WM CF-Store-GTM -- installation on hold");
             return -1;
         }
 
